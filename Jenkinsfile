@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Charmiss/Project.git'
+                git branch: 'gitpract', url: 'https://github.com/Charmiss/Project.git'
             }
         }
         stage('Build') {
