@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Charmiss/Project.git', branch: 'Jenkinsfile'
+                checkout scm
             }
         }
         stage('Build') {
