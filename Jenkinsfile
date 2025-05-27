@@ -7,16 +7,19 @@ pipeline {
                 git branch: 'gitpract', url: 'https://github.com/Charmiss/Project.git'
             }
         }
+
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                sh './build.sh'
+                bat 'build.bat'   // Use your Windows batch build script here
+                // Or run Windows commands directly, e.g. bat 'mvn clean package'
             }
         }
+
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh './run-tests.sh'
+                bat 'run-tests.bat'  // Your Windows batch test script
             }
         }
     }
